@@ -1,18 +1,20 @@
 body {
-	margin:  0;
-	background: pink;
+  margin: 0;
+  padding: 20px;
+  font-family: Helvetica;
 }
 
-#playersGrid{
-	grid-template-columns: 30px repeat(3, 1fr) 30px
+#playersGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  grid-gap: 2em;
 }
 
-.playerCard{
-	border: 2px solid #9DD1F1;
-	display: inline-block;
-	height: 200px;
-	margin-top: 4px;
-	padding: 30px auto;
-	text-align: center;
-	width: 215px;
+.playerCard {
+  border: 2px solid #9dd1f1;
+  display: flex;
+  padding: 30px auto;
+  text-align: center;
+  max-width: 400px;
+  max-height: 400px;
 }
