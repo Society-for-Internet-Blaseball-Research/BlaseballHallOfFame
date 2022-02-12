@@ -1,14 +1,64 @@
 /* Typography imported from Google Fonts */
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400");
 
-.object-fit_cover { object-fit: cover }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+.object-fit_cover {
+  object-fit: cover;
 }
 
-p, a {
-  font-family: 'Source Sans Pro', sans-serif;
+.grid {
+  --gap: 20px;
+  display: grid;
+  gap: var(--gap);
+
+  /* Using min() */
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+        min(
+          (40rem - 100%) * 999,
+          100%),
+        1fr
+      )
+    );
+
+  /* Using clamp() */
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+        clamp(
+          33.3333% - var(--gap),
+          (40rem - 100%) * 999,
+          100%),
+        1fr
+      )
+    );
+}
+
+.item {
+  padding: 1.35rem;
+  background: #90bcbc;
+  border-radius: 4px;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+p,
+a {
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 /* Generic styles */
@@ -20,14 +70,14 @@ a {
   background-color: goldenrod;
   text-decoration: none;
   color: white;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   text-align: center;
   display: inline-block;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 a:hover {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 /* Styles for the hero image */
@@ -57,7 +107,7 @@ a:hover {
 
 .hero > article > a {
   padding: 1rem;
-  margin-top: .75rem;
+  margin-top: 0.75rem;
 }
 
 /* players styles */
@@ -68,8 +118,8 @@ a:hover {
 /* footer */
 footer {
   background-color: #333;
-  padding: .75rem;
+  padding: 0.75rem;
   color: white;
   text-align: center;
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
