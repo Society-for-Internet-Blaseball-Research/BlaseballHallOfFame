@@ -3,7 +3,7 @@ body {
 	background: pink;
 }
 
-#playerGrid{
+#playersGrid{
 	grid-template-columns: 30px repeat(3, 1fr) 30px
 }
 
