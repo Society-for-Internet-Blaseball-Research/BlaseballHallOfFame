@@ -1,8 +1,32 @@
 /* Typography imported from Google Fonts */
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400");
 
+html *
+{
+   color: #FFFFFF !important;
+}
+
 .object-fit_cover {
   object-fit: cover;
+}
+
+.text-box{
+    position: absolute;
+    top: 73%;
+    padding-top: -1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.teams-list{
+    position: absolute;
+    font-size: 130%;
+    top: 72.5%;
+    left: 70%;
+    padding-right: 20px;
+    overflow: hidden;
 }
 
 .grid {
@@ -37,14 +61,23 @@
 }
 
 .item {
-  padding: 1.35rem;
   background: #90bcbc;
+  border-color: #EEBC1D;
+  border: 2px;
   border-radius: 4px;
+  position: relative;
+  display: inline-block;
+}
+
+.item > img {
+  width: 100%;
+  object-fit: cover;
 }
 
 h3 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  margin-top: 5px;
 }
 
 h1,
