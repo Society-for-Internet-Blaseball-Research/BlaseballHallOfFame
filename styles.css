@@ -11,22 +11,28 @@ html *
 }
 
 .text-box{
-    position: absolute;
-    top: 73%;
-    padding-top: -1px;
+    position: static;
     padding-left: 10px;
     padding-right: 10px;
     background: rgba(0, 0, 0, 0.5);
     overflow: hidden;
+    margin-bottom: 0px;
+    margin-top: -5px;
+}
+
+.blurb {
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+
+.text-box > h3{
+  padding-right: 5px;
 }
 
 .teams-list{
-    position: absolute;
-    font-size: 130%;
-    top: 72.5%;
-    left: 70%;
-    padding-right: 20px;
-    overflow: hidden;
+    font-size: 100%;
+    text-align: center;
+    margin-top: 0px;
 }
 
 .grid {
@@ -45,26 +51,9 @@ html *
         1fr
       )
     );
-
-  /* Using clamp() */
-  grid-template-columns:
-    repeat(
-      auto-fit,
-      minmax(
-        clamp(
-          33.3333% - var(--gap),
-          (40rem - 100%) * 999,
-          100%),
-        1fr
-      )
-    );
 }
 
 .item {
-  background: #90bcbc;
-  border-color: #EEBC1D;
-  border: 2px;
-  border-radius: 4px;
   position: relative;
   display: inline-block;
 }
@@ -76,7 +65,7 @@ html *
 
 h3 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
   margin-top: 5px;
 }
 
