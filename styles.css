@@ -1,20 +1,75 @@
-body {
-  margin: 0;
-  padding: 20px;
-  font-family: Helvetica;
+/* Typography imported from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
+
+.object-fit_cover { object-fit: cover }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
 }
 
-#playersGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 20%);
-  grid-gap: 2em;
+p, a {
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-.playerCard {
-  border: 2px solid #9dd1f1;
-  display: flex;
-  padding: 30px auto;
+/* Generic styles */
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  background-color: goldenrod;
+  text-decoration: none;
+  color: white;
+  border-radius: .25rem;
   text-align: center;
-  max-width: 400px;
-  max-height: 400px;
+  display: inline-block;
+  transition: all .3s;
+}
+
+a:hover {
+  opacity: .6;
+}
+
+/* Styles for the hero image */
+.hero {
+  background: #000000 50% 65%;
+  background-size: cover;
+  padding: 4rem 2rem;
+  /* grid styles */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: center;
+}
+
+.hero > * {
+  color: white;
+}
+
+.hero > h1 {
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+
+.hero > article > p {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.hero > article > a {
+  padding: 1rem;
+  margin-top: .75rem;
+}
+
+/* players styles */
+.players {
+  padding: 2rem;
+}
+
+/* footer */
+footer {
+  background-color: #333;
+  padding: .75rem;
+  color: white;
+  text-align: center;
+  font-size: .75rem;
 }
