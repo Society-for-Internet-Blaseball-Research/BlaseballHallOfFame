@@ -152,7 +152,8 @@ a:hover {
 
 .FAQ_wrapper{
   padding-top: 0.01rem;
-  padding-borders: 0.01rem;
+  padding-left: 25rem;
+  padding-right: 25rem;
   padding-bottom: 0.01rem;
   margin-top: 3.5rem;
   background: black;
